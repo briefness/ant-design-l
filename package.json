@@ -6,17 +6,40 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:ui": "vitest --ui",
+    "test": "vitest"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.0",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-typescript": "^7.18.6",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vitest/ui": "^0.19.1",
+    "@vue/test-utils": "^2.0.2",
+    "jsdom": "^20.0.0",
     "typescript": "^4.6.4",
     "unplugin-vue-components": "^0.21.2",
     "vite": "^3.0.0",
+    "vitest": "^0.19.1",
     "vue-tsc": "^0.38.4"
+  },
+  "author": "Lucas",
+  "license": "MIT",
+  "keywords": [
+    "antd",
+    "vue",
+    "typescript"
+  ],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/briefness/ant-design-l.git"
   }
 }

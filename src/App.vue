@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import LButton from './components/LButton/index.vue'
+  import LButton from '@components/LButton/index.vue'
 </script>
 
 <template>

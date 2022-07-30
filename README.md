@@ -1,6 +1,29 @@
-# Vue 3 + TypeScript + Vite + ant design
+# Vue 3 + TypeScript + Vite + ant design vue + vitest
 
-## Using pnpm or yarn
+## install
+
+```bash
+$ pnpm install
+```
+## run
+
+```bash
+$ pnpm dev
+```
+
+## Using test
+
+```bash
+$ pnpm test
+```
+## Using test ui panel
+
+```bash
+$ pnpm test:ui
+```
+
+
+## Using pnpm or yarn (todo)
 
 **We recommend using npm or yarn to install**，it not only makes development easier，but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
 
@@ -13,3 +36,8 @@ $ yarn add ant-design-lz
 ```
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
+
+
+## vitest api
+
+https://cn.vitest.dev/api

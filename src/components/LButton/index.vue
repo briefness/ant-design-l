@@ -1,16 +1,16 @@
 <script setup lang="ts">
   interface ButtonProps {
-    block: boolean
-    danger: boolean
-    disabled: boolean
-    ghost: boolean
-    href: string
-    htmlType: string
-    loading: boolean | { delay: number }
-    shape: 'default' | 'circle' | 'round'
-    size: 'large' | 'middle' | 'small'
-    target: string
-    type: 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default'
+    block?: boolean
+    danger?: boolean
+    disabled?: boolean
+    ghost?: boolean
+    href?: string
+    htmlType?: string
+    loading?: boolean | { delay: number }
+    shape?: 'default' | 'circle' | 'round'
+    size?: 'large' | 'middle' | 'small'
+    target?: string
+    type?: 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default'
   }
 
   const emit = defineEmits(['click']);

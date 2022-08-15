@@ -28,6 +28,7 @@ export default defineConfig({
     // 定义别名
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@store': path.resolve(__dirname, 'src/store'),
       '@components': path.resolve(__dirname, 'src/components')
     }
   },

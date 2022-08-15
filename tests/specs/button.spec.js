@@ -3,12 +3,21 @@ import { test, expect } from 'vitest'
 
 import LButton from '@components/LButton/index.vue'
 
-test('buttun type', () => {
+test('buttun type', async () => {
   const wrapper = mount(LButton, {
     props: {
       type: 'primary'
     }
   })
-  console.log(wrapper)
   expect(wrapper.attributes('class')).toContain('ant-btn-primary')
+})
+
+test('buttun click emit', async () => {
+  const wrapper = mount(LButton, {
+    props: {
+      type: 'primary'
+    }
+  })
+  await wrapper.trigger('click')
+  expect(wrapper.emitted('click')).toBeTruthy()
 })

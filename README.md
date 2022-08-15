@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite + ant design vue + vitest
+# Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup
 
 ## install
 
@@ -41,3 +41,11 @@ If you are in a bad network environment，you can try other registries and tools
 ## vitest api
 
 https://cn.vitest.dev/api
+
+## pinia api
+
+https://pinia.web3doc.top/
+
+## rollup api
+
+https://www.rollupjs.com/

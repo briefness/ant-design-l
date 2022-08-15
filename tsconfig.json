@@ -12,7 +12,14 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@store/*": ["src/store/*"],
+      "@components/*": ["src/components/*"]
+    },
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tests"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tests", "src/store/index.ts"],
+  "exclude": ["node_modules"]
 }

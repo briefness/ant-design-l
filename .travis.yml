@@ -4,6 +4,3 @@ node_js:
 
 install:
   - pnpm install
-
-script:
-  - npm run build

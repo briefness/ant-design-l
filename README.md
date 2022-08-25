@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup
+# Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup + travis
 
 ## install
 

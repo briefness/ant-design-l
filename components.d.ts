@@ -8,6 +8,9 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
+    copy: typeof import('./src/components/LModal copy/index.vue')['default']
     LButton: typeof import('./src/components/LButton/index.vue')['default']
+    LMessage: typeof import('./src/components/LMessage/index.vue')['default']
+    LModal: typeof import('./src/components/LModal/index.vue')['default']
   }
 }

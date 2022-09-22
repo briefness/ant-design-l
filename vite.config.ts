@@ -1,17 +1,17 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   test: {
     environment: 'jsdom',
-    includeSource: ['src/**/*.{js,ts,vue}'],
+    includeSource: ['src/**/*.{js,ts,vue,tsx,jsx}'],
     deps: {
       inline: [
         "ant-design-vue"
@@ -20,6 +20,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    vueJsx(),
     Components({
       resolvers: [AntDesignVueResolver()],
     })
@@ -29,7 +30,8 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@store': path.resolve(__dirname, 'src/store'),
-      '@components': path.resolve(__dirname, 'src/components')
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@util': path.resolve(__dirname, 'src/util')
     }
   },
   build: {

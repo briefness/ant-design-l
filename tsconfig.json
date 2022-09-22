@@ -16,7 +16,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@store/*": ["src/store/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@util/*": ["src/util/*"]
     },
     "skipLibCheck": true
   },

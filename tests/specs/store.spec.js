@@ -15,6 +15,6 @@ describe('Counter Store', () => {
     expect(store.doubleCounter).toBe(2)
     expect(store.doubleCounterPlusOne).toBe(3)
     expect(store.doubleCounterBelongParams(10)).toBe(11)
-    expect(store.doubleCounterBelongParamsActions()).toBe(101)
+    // expect(store.doubleCounterBelongParamsActions()).toBe(101)
   })
 })

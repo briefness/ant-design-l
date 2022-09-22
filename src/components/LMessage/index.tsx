@@ -1,45 +1,30 @@
 import { defineComponent } from "vue";
 // @ts-ignore
+import message from "./index.module.less";
+// @ts-ignore
 import initDefaultProps from "@util/initDefaultProps";
 
-const ModalProps = {
-  appendToBody: Boolean,
-  visible: Boolean,
-  width: Number,
-  title: String,
-  closable: Boolean,
-  mask: Boolean,
-  cancelText: String,
-  okText: String,
+const MessageProps = {
+  type: String,
+  content: String,
 };
 
 export default defineComponent({
-  name: "LModal",
-  props: initDefaultProps(ModalProps, {
-    appendToBody: false,
-    visible: false,
-    width: 520,
-    title: "",
-    closable: true,
-    mask: true,
-    cancelText: "取消",
-    okText: "确定",
+  name: "LMessage",
+  props: initDefaultProps(MessageProps, {
+    type: "info",
+    content: "",
   }),
-  emits: ["update:visible", "ok"],
 
-  setup(props, { slots, emit }) {
+  setup(props, {}) {
     return () => {
+      const { content } = props;
       return (
-        <LModal
-          {...props}
-          v-slots={slots}
-          onUpdate:visible={(val) => {
-            emit("update:visible", val);
-          }}
-          onOk={() => {
-            emit("ok");
-          }}
-        ></LModal>
+        <div class={message["l-message"]}>
+          <div class={message["l-message-notice"]}>
+            <div class={message["l-message-notice-content"]}>{content}</div>
+          </div>
+        </div>
       );
     };
   },

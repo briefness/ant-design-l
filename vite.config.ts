@@ -12,6 +12,12 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     includeSource: ['src/**/*.{js,ts,vue,tsx,jsx}'],
+    transformMode: {
+      web: [/\.[jt]sx$/],
+    },
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
     deps: {
       inline: [
         "ant-design-vue"

@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "vitest/importMeta"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],

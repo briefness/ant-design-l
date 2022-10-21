@@ -17,7 +17,7 @@ const routes = [
 ];
 export const router = createRouter({
   // 创建一个 HTML5 历史， 如果想创建hash历史记录，使用createWebHashHistory创建
-  history: createWebHistory('/'),
+  history: createWebHistory(import.meta.env.VITE_PUBLIC_PATH || '/'),
   routes: routes as unknown as RouteRecordRaw[],
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 }),

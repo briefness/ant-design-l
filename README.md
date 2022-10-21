@@ -1,14 +1,20 @@
 # Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup + github action + husky
 
-练手项目：把各种有的没的技术，放在一起，试试一些新的api，随心情实现功能
+练手项目：把各种有的没的技术，放在一起，试试一些新的 api，随心情实现功能
 
 **不要在乎细节，这就是一个练手的项目，如果你也想加入，一起练手，那就拉一个分支自己去玩吧**
+
+```bash
+$ node >= 18.7.0
+$ npm >= 6.14.13
+```
 
 ## install
 
 ```bash
 $ pnpm install
 ```
+
 ## run
 
 ```bash
@@ -20,12 +26,12 @@ $ pnpm dev
 ```bash
 $ pnpm test
 ```
+
 ## Using test ui panel
 
 ```bash
 $ pnpm test:ui
 ```
-
 
 ## Using pnpm or yarn (todo)
 
@@ -40,7 +46,6 @@ $ yarn add ant-design-lz
 ```
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
-
 
 ## vitest api
 

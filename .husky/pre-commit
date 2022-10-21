@@ -1,1 +1,1 @@
-pnpm test:ui
+npm run test:ui

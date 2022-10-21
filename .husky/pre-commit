@@ -1,2 +1,2 @@
 echo '执行测试'
-npm run test:ui
+npm run lint

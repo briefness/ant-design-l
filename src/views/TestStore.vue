@@ -35,9 +35,13 @@
 </script>
 
 <template>
-  <p>{{ store.doubleCounterPlusOne }}</p>
+  <p class="f20">{{ store.doubleCounterPlusOne }}</p>
   <p>{{ store.doubleCounter }}</p>
   <p>{{ store.doubleCounterBelongParams(20) }}</p>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .f20 {
+    font-size: 20px;
+  }
+</style>

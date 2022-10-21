@@ -51,20 +51,20 @@
 
 <template>
   <teleport to="body" :disabled="appendToBody">
-    <div v-if="visible" class="modal">
-      <div v-if="mask" class="modal-mask"></div>
-      <div class="modal-wrap" :style="modalStyle" ref="modal">
-        <div class="modal-header">
-          <div class="modal-title">
+    <div v-if="visible" class="l-modal">
+      <div v-if="mask" class="l-modal-mask"></div>
+      <div class="l-modal-wrap" :style="modalStyle" ref="modal">
+        <div class="l-modal-header">
+          <div class="l-modal-title">
             <slot v-if="slots.title" name="title"></slot>
             <p v-else>{{title}}</p>
           </div>
-          <div v-if="closable" class="modal-close" @click="cancel">X</div>
+          <div v-if="closable" class="l-modal-close" @click="cancel">X</div>
         </div>
-        <div class="modal-body">
+        <div class="l-modal-body">
           <slot></slot>
         </div>
-        <div class="modal-footer">
+        <div class="l-modal-footer">
           <slot v-if="slots.footer" name="footer"></slot>
           <l-button @click="cancel">{{ props.cancelText }}</l-button>
           <l-button type="primary" @click="confirm">{{ props.okText }}</l-button>
@@ -83,7 +83,7 @@
     bottom: 0;
     left: 0;
   }
-  .modal {
+  .l-modal {
     .fixed();
     overflow: auto;
     &-mask{

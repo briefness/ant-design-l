@@ -1,7 +1,13 @@
-import { createPinia } from 'pinia'
+import type { App } from 'vue'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { createPinia } from 'pinia'
 
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
+const store = createPinia()
 
-export default pinia
+store.use(piniaPluginPersistedstate)
+
+export function setupStore(app: App) {
+  app.use(store)
+}
+
+export { store };

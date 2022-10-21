@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
+import { store } from '@/store';
 interface StoreProp {
   counter: number;
   name: string;
   isAdmin: boolean;
 }
-// useStore 可以是 useUser、useCart 之类的任何东西
+// useTestStore 可以是 useUser、useCart 之类的任何东西
 // 第一个参数是应用程序中 store 的唯一 id
-export const useStore = defineStore('main', {
+export const useTestStore = defineStore('main', {
   state: (): StoreProp => {
     return {
       // 所有这些属性都将自动推断其类型
@@ -33,3 +34,8 @@ export const useStore = defineStore('main', {
   },
   persist: true, // 保持数据持久化，支持配置项方式配置
 })
+
+// 在setup之外使用
+export function useAppStoreWithOut() {
+  return useTestStore(store);
+}

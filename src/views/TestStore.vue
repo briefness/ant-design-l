@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { onMounted } from 'vue';
-  import { useStore } from '@/store/testStore/index'
-  const store = useStore()
+  import { useTestStore } from '@/store/modules/testStore'
+  const store = useTestStore()
 
   console.log('===store===', store)
 
@@ -24,6 +24,9 @@
 
     // 每当它发生变化时，将整个状态持久化到本地存储
     localStorage.setItem('cart', JSON.stringify(state))
+  })
+  store.$onAction(() => {
+    // 在 action 的时候执行
   })
 
   onMounted(() => {

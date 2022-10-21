@@ -5,7 +5,6 @@
   import LModal from '@components/LModal/index.tsx'
   // @ts-ignore
   import message from '@components/LMessage/index.ts'
-  import TestStore from '@/TestStore.vue'
 
   const visible = ref(false)
 
@@ -31,7 +30,7 @@
       就是这样的吧
     </div>
   </LModal>
-  <TestStore />
+  <RouterView />
 </template>
 
 <style scoped>

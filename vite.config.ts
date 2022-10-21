@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
+import fs from 'fs/promises'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
@@ -24,6 +25,30 @@ export default defineConfig({
       ]
     }
   },
+  // esbuild: {
+  //   jsxFactory: 'h',
+  //   loader: 'jsx',
+  //   include: /src\/((?!type=template).)*\.tsx?$/,
+  //   exclude: [],
+  // },
+  // optimizeDeps: {
+  //   esbuildOptions: {
+  //     plugins: [
+  //       {
+  //         name: 'load-js-files-as-jsx',
+  //         setup(build) {
+  //           build.onLoad(
+  //             { filter: /src\/((?!type=template).)*\.tsx?$/ },
+  //             async (args) => ({
+  //               loader: 'jsx',
+  //               contents: await fs.readFile(args.path, 'utf8'),
+  //             })
+  //           );
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
   plugins: [
     vue(),
     vueJsx(),

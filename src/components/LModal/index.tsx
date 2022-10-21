@@ -1,7 +1,5 @@
 import { defineComponent } from "vue";
-// @ts-ignore
 import LModal from "@components/LModal/index.vue";
-// @ts-ignore
 import initDefaultProps from "@util/initDefaultProps";
 
 const ModalProps = {

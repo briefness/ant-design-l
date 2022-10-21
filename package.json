@@ -17,7 +17,8 @@
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.18",
     "pinia-plugin-persistedstate": "^2.1.1",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
@@ -52,7 +53,8 @@
     "vue3",
     "vitest",
     "vite",
-    "typescript"
+    "typescript",
+    "git flow"
   ],
   "files": [
     "dist"

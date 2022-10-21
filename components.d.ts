@@ -12,5 +12,7 @@ declare module '@vue/runtime-core' {
     LButton: typeof import('./src/components/LButton/index.vue')['default']
     LMessage: typeof import('./src/components/LMessage/index.vue')['default']
     LModal: typeof import('./src/components/LModal/index.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }

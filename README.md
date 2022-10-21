@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup + github action
+# Vue 3 + TypeScript + Vite + ant design vue + vitest + pinia + rollup + github action + husky
 
 练手项目：把各种有的没的技术，放在一起，试试一些新的api，随心情实现功能
 

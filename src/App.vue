@@ -1,22 +1,22 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import LButton from '@components/LButton/index.vue'
+  import { ref } from 'vue';
+  import LButton from '@components/LButton/index.vue';
   // @ts-ignore
-  import LModal from '@components/LModal/index.tsx'
+  import LModal from '@components/LModal/index.tsx';
   // @ts-ignore
-  import message from '@components/LMessage/index.ts'
+  import message from '@components/LMessage/index.ts';
 
-  const visible = ref(false)
+  const visible = ref(false);
 
   const showModal = () => {
-    visible.value = true
-  }
+    visible.value = true;
+  };
   const showMessage = () => {
-    message.info({content: '你好', duration: 10})
-  }
+    message.info({ content: '你好', duration: 10 });
+  };
   const cancelModal = () => {
-    visible.value = false
-  }
+    visible.value = false;
+  };
 </script>
 
 <template>
@@ -26,12 +26,9 @@
     <template #title>
       <div>你好</div>
     </template>
-    <div>
-      就是这样的吧
-    </div>
+    <div> 就是这样的吧 </div>
   </LModal>
   <RouterView />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

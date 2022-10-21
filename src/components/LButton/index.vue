@@ -1,20 +1,20 @@
 <script setup lang="ts">
   interface ButtonProps {
-    block?: boolean
-    danger?: boolean
-    disabled?: boolean
-    ghost?: boolean
-    href?: string
-    htmlType?: string
-    loading?: boolean | { delay: number }
-    shape?: 'default' | 'circle' | 'round'
-    size?: 'large' | 'middle' | 'small'
-    target?: string
-    type?: 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default'
+    block?: boolean;
+    danger?: boolean;
+    disabled?: boolean;
+    ghost?: boolean;
+    href?: string;
+    htmlType?: string;
+    loading?: boolean | { delay: number };
+    shape?: 'default' | 'circle' | 'round';
+    size?: 'large' | 'middle' | 'small';
+    target?: string;
+    type?: 'primary' | 'ghost' | 'dashed' | 'link' | 'text' | 'default';
   }
 
   const emit = defineEmits(['click']);
-  
+
   const buttonProps = withDefaults(defineProps<ButtonProps>(), {
     block: false,
     danger: false,
@@ -24,13 +24,12 @@
     loading: false,
     shape: 'default',
     size: 'middle',
-    type: 'default'
-  })
+    type: 'default',
+  });
 
   const clickHandle = (e?: Event) => {
-    emit('click', e)
-  }
-
+    emit('click', e);
+  };
 </script>
 
 <template>
@@ -40,5 +39,4 @@
   </a-button>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

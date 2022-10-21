@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 import { store } from '@/store';
 interface StoreProp {
   counter: number;
@@ -14,26 +14,26 @@ export const useTestStore = defineStore('main', {
       counter: 1,
       name: 'Eduardo',
       isAdmin: true,
-    }
+    };
   },
   getters: {
     doubleCounter: (state) => state.counter * 2,
     doubleCounterPlusOne(): number {
-      return this.doubleCounter + 1
+      return this.doubleCounter + 1;
     },
     doubleCounterBelongParams(state) {
-      return (params: number): number => state.counter + params
-    }
+      return (params: number): number => state.counter + params;
+    },
   },
   // 在外部直接使用pinia的实例调用
   actions: {
     doubleCounterBelongParamsActions() {
-      this.counter = this.counter + 100
-      console.log('使用pinia的actions方法输出的数据是：', this.counter + 100)
-    }
+      this.counter = this.counter + 100;
+      console.log('使用pinia的actions方法输出的数据是：', this.counter + 100);
+    },
   },
   persist: true, // 保持数据持久化，支持配置项方式配置
-})
+});
 
 // 在setup之外使用
 export function useAppStoreWithOut() {

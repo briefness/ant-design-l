@@ -1,18 +1,18 @@
 <script setup lang="ts">
-  import { computed, useSlots, watch, ref } from 'vue'
-  import { isNumber } from 'lodash-es'
-  import LButton from '@components/LButton/index.vue'
-  import { onClickOutside, onKeyDown } from '@vueuse/core'
+  import { computed, useSlots, watch, ref } from 'vue';
+  import { isNumber } from 'lodash-es';
+  import LButton from '@components/LButton/index.vue';
+  import { onClickOutside, onKeyDown } from '@vueuse/core';
 
   interface ModalProps {
-    appendToBody?: boolean
-    visible: boolean
-    width?: string | number
-    title?: string
-    closable?: boolean
-    mask?: boolean
-    cancelText?: string
-    okText?: string
+    appendToBody?: boolean;
+    visible: boolean;
+    width?: string | number;
+    title?: string;
+    closable?: boolean;
+    mask?: boolean;
+    cancelText?: string;
+    okText?: string;
   }
   const props = withDefaults(defineProps<ModalProps>(), {
     appendToBody: false,
@@ -22,31 +22,35 @@
     closable: true,
     mask: true,
     cancelText: '取消',
-    okText: '确定'
-  })
+    okText: '确定',
+  });
 
-  const modalStyle = computed(() => ({width: isNumber(props.width) ? `${props.width}px` : props.width}))
+  const modalStyle = computed(() => ({
+    width: isNumber(props.width) ? `${props.width}px` : props.width,
+  }));
 
-  const slots = useSlots()
-  const emit = defineEmits(['update:visible', 'ok'])
+  const slots = useSlots();
+  const emit = defineEmits(['update:visible', 'ok']);
 
   const cancel = () => {
-    emit('update:visible', false)
-  }
+    emit('update:visible', false);
+  };
 
   const confirm = () => {
-    emit('ok')
-  }
+    emit('ok');
+  };
 
-  const modal = ref(null)
+  const modal = ref(null);
 
-  watch(() => props.visible, (val: boolean) => {
-    if (val) {
-      onClickOutside(modal, cancel)
-      onKeyDown('Escape', cancel)
-    }
-  })
-
+  watch(
+    () => props.visible,
+    (val: boolean) => {
+      if (val) {
+        onClickOutside(modal, cancel);
+        onKeyDown('Escape', cancel);
+      }
+    },
+  );
 </script>
 
 <template>
@@ -57,7 +61,7 @@
         <div class="l-modal-header">
           <div class="l-modal-title">
             <slot v-if="slots.title" name="title"></slot>
-            <p v-else>{{title}}</p>
+            <p v-else>{{ title }}</p>
           </div>
           <div v-if="closable" class="l-modal-close" @click="cancel">X</div>
         </div>
@@ -86,7 +90,7 @@
   .l-modal {
     .fixed();
     overflow: auto;
-    &-mask{
+    &-mask {
       .fixed();
       z-index: @index;
       height: 100%;
@@ -140,7 +144,7 @@
       text-align: right;
       border-top: 1px solid #f0f0f0;
       border-radius: 0 0 2px 2px;
-      .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+      .ant-btn + .ant-btn:not(.ant-dropdown-trigger) {
         margin-left: 8px;
       }
     }

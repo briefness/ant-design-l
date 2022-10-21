@@ -1,6 +1,6 @@
-import { defineComponent } from "vue";
-import LModal from "@components/LModal/index.vue";
-import initDefaultProps from "@util/initDefaultProps";
+import { defineComponent } from 'vue';
+import LModal from '@components/LModal/index.vue';
+import initDefaultProps from '@util/initDefaultProps';
 
 const ModalProps = {
   appendToBody: Boolean,
@@ -14,18 +14,18 @@ const ModalProps = {
 };
 
 export default defineComponent({
-  name: "LModal",
+  name: 'LModal',
   props: initDefaultProps(ModalProps, {
     appendToBody: false,
     visible: false,
     width: 520,
-    title: "",
+    title: '',
     closable: true,
     mask: true,
-    cancelText: "取消",
-    okText: "确定",
+    cancelText: '取消',
+    okText: '确定',
   }),
-  emits: ["update:visible", "ok"],
+  emits: ['update:visible', 'ok'],
 
   setup(props, { slots, emit }) {
     return () => {
@@ -34,10 +34,10 @@ export default defineComponent({
           {...props}
           v-slots={slots}
           onUpdate:visible={(val: boolean) => {
-            emit("update:visible", val);
+            emit('update:visible', val);
           }}
           onOk={() => {
-            emit("ok");
+            emit('ok');
           }}
         ></LModal>
       );

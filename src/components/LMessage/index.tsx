@@ -1,8 +1,8 @@
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 // @ts-ignore
-import message from "./index.module.less";
+import message from './index.module.less';
 // @ts-ignore
-import initDefaultProps from "@util/initDefaultProps";
+import initDefaultProps from '@util/initDefaultProps';
 
 const MessageProps = {
   type: String,
@@ -10,19 +10,19 @@ const MessageProps = {
 };
 
 export default defineComponent({
-  name: "LMessage",
+  name: 'LMessage',
   props: initDefaultProps(MessageProps, {
-    type: "info",
-    content: "",
+    type: 'info',
+    content: '',
   }),
 
   setup(props, {}) {
     return () => {
       const { content } = props;
       return (
-        <div class={message["l-message"]}>
-          <div class={message["l-message-notice"]}>
-            <div class={message["l-message-notice-content"]}>{content}</div>
+        <div class={message['l-message']}>
+          <div class={message['l-message-notice']}>
+            <div class={message['l-message-notice-content']}>{content}</div>
           </div>
         </div>
       );

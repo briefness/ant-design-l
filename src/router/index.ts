@@ -5,14 +5,16 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // 白名单应该包含基本静态路由
 const WHITE_NAME_LIST: string[] = [];
-const routes = [{
-  path: '/testStore',
-  name: 'testStore',
-  component: () => import('@/views/TestStore.vue'),
-  meta: {
-    title: '测试store',
+const routes = [
+  {
+    path: '/testStore',
+    name: 'testStore',
+    component: () => import('@/views/TestStore.vue'),
+    meta: {
+      title: '测试store',
+    },
   },
-}]
+];
 export const router = createRouter({
   // 创建一个 HTML5 历史， 如果想创建hash历史记录，使用createWebHashHistory创建
   history: createWebHistory('/'),

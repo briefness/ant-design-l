@@ -1,3 +1,4 @@
+// 使用tsx的方式实现左键
 import { defineComponent } from 'vue';
 import LModal from '@components/LModal/index.vue';
 import initDefaultProps from '@util/initDefaultProps';

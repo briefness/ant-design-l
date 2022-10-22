@@ -11,7 +11,6 @@ import { checkStatus } from './checkStatus';
 import { RequestEnum, ContentTypeEnum } from '@/enums/httpEnum';
 import { setObjToUrlParams, deepMerge } from '@/util';
 import { joinTimestamp, formatRequestDate } from './helper';
-// const crmApiUrl = globSetting.crmApiUrl;
 
 /**
  * @description: 数据处理，方便区分多种处理方式

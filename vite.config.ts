@@ -8,7 +8,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 
-import path from 'path';
+import { resolve } from 'path';
 
 export default ({ mode }: ConfigEnv): UserConfig => {
   const root = process.cwd();
@@ -63,10 +63,10 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     resolve: {
       // 定义别名
       alias: {
-        '@': path.resolve(__dirname, 'src'),
-        '@store': path.resolve(__dirname, 'src/store'),
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@util': path.resolve(__dirname, 'src/util'),
+        '@': resolve(__dirname, 'src'),
+        '@store': resolve(__dirname, 'src/store'),
+        '@components': resolve(__dirname, 'src/components'),
+        '@util': resolve(__dirname, 'src/util'),
       },
     },
     build: {

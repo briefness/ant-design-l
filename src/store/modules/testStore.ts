@@ -7,7 +7,7 @@ interface StoreProp {
 }
 // useTestStore 可以是 useUser、useCart 之类的任何东西
 // 第一个参数是应用程序中 store 的唯一 id
-export const useTestStore = defineStore('main', {
+export const useTestStore = defineStore('test', {
   state: (): StoreProp => {
     return {
       // 所有这些属性都将自动推断其类型
@@ -36,6 +36,6 @@ export const useTestStore = defineStore('main', {
 });
 
 // 在setup之外使用
-export function useAppStoreWithOut() {
+export function useTestStoreWithOut() {
   return useTestStore(store);
 }

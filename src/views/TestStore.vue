@@ -1,7 +1,10 @@
 <script setup lang="ts">
   import { onMounted } from 'vue';
+  import { useRouter } from 'vue-router';
+  import LButton from '@components/LButton/index.vue';
   import { useTestStore } from '@/store/modules/testStore';
   const store = useTestStore();
+  const router = useRouter();
 
   console.log('===store===', store);
 
@@ -32,12 +35,17 @@
   onMounted(() => {
     store.doubleCounterBelongParamsActions();
   });
+
+  const returnBack = () => {
+    router.push({ path: '/' });
+  };
 </script>
 
 <template>
   <p class="f20">{{ store.doubleCounterPlusOne }}</p>
   <p>{{ store.doubleCounter }}</p>
   <p>{{ store.doubleCounterBelongParams(20) }}</p>
+  <LButton type="primary" @click="returnBack">跳转到首页</LButton>
 </template>
 
 <style scoped>

@@ -4,6 +4,16 @@
 
 **不要在乎细节，这就是一个练手的项目，如果你也想加入，一起练手，那就拉一个分支自己去玩吧**
 
+推荐 vs code 插件
+
+**切记是 Volar 不是 Vetur，Vetur 对 vue3 script setup 的语法支持不是很好，且不要同时安装他们两个插件**
+
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Vitest](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer)
+
 ```bash
 $ node >= 18.7.0
 $ npm >= 6.14.13

@@ -4,7 +4,7 @@
 
 **不要在乎细节，这就是一个练手的项目，如果你也想加入，一起练手，那就拉一个分支自己去玩吧**
 
-推荐 vs code 插件
+## 推荐 vs code 插件
 
 **切记是 Volar 不是 Vetur，Vetur 对 vue3 script setup 的语法支持不是很好，且不要同时安装他们两个插件**
 
@@ -19,28 +19,38 @@ $ node >= 18.7.0
 $ npm >= 6.14.13
 ```
 
+**推荐使用 pnpm**
+
 ## install
 
 ```bash
 $ pnpm install
+$ yarn install
+$ npm install
 ```
 
 ## run
 
 ```bash
 $ pnpm dev
+$ yarn dev
+$ npm run dev
 ```
 
 ## Using test
 
 ```bash
 $ pnpm test
+$ yarn test
+$ npm run test
 ```
 
 ## Using test ui panel
 
 ```bash
 $ pnpm test:ui
+$ yarn test:ui
+$ npm run test:ui
 ```
 
 ## Using pnpm or yarn (todo)

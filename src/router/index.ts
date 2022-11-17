@@ -7,11 +7,29 @@ import { createRouter, createWebHistory } from 'vue-router';
 const WHITE_NAME_LIST: string[] = [];
 const routes = [
   {
-    path: '/testStore',
-    name: 'testStore',
-    component: () => import('@/views/TestStore.vue'),
+    path: '/',
+    name: 'Index',
+    component: () => import('@/views/system/Index.vue'),
     meta: {
-      title: '测试store',
+      title: '首页',
+    },
+    children: [
+      {
+        path: '/testStore',
+        name: 'TestStore',
+        component: () => import('@/views/TestStore.vue'),
+        meta: {
+          title: '测试store',
+        },
+      },
+    ],
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: () => import('@/views/system/404.vue'),
+    meta: {
+      title: '404',
     },
   },
 ];

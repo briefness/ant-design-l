@@ -67,6 +67,10 @@ $ yarn add ant-design-lz
 
 If you are in a bad network environment，you can try other registries and tools like [cnpm](https://github.com/cnpm/cnpm).
 
+## vue3 api
+
+https://cn.vuejs.org/api/sfc-script-setup.html
+
 ## vitest api
 
 https://cn.vitest.dev/api
@@ -74,6 +78,10 @@ https://cn.vitest.dev/api
 ## pinia api
 
 https://pinia.web3doc.top/
+
+## vite3 api
+
+https://cn.vitejs.dev/
 
 ## rollup api
 

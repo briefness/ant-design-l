@@ -37,15 +37,17 @@
   });
 
   const returnBack = () => {
-    router.push({ path: '/' });
+    router.push({ path: 'testComponent' });
   };
 </script>
 
 <template>
-  <p class="f20">{{ store.doubleCounterPlusOne }}</p>
-  <p>{{ store.doubleCounter }}</p>
-  <p>{{ store.doubleCounterBelongParams(20) }}</p>
-  <LButton type="primary" @click="returnBack">跳转到首页</LButton>
+  <div>
+    <p class="f20">{{ store.doubleCounterPlusOne }}</p>
+    <p>{{ store.doubleCounter }}</p>
+    <p>{{ store.doubleCounterBelongParams(20) }}</p>
+    <LButton type="primary" @click="returnBack">跳转到测试组件</LButton>
+  </div>
 </template>
 
 <style scoped>

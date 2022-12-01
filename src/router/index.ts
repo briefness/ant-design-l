@@ -20,6 +20,16 @@ const routes = [
         component: () => import('@/views/TestStore.vue'),
         meta: {
           title: '测试store',
+          ignoreKeepAlive: false, // 配合着keep-alive，控制是否缓存
+        },
+      },
+      {
+        path: '/testComponent',
+        name: 'TestComponent',
+        component: () => import('@/views/TestComponent.vue'),
+        meta: {
+          title: '测试组件',
+          ignoreKeepAlive: false, // 配合着keep-alive，控制是否缓存
         },
       },
     ],
@@ -30,6 +40,7 @@ const routes = [
     component: () => import('@/views/system/404.vue'),
     meta: {
       title: '404',
+      ignoreKeepAlive: false, // 配合着keep-alive，控制是否缓存
     },
   },
 ];

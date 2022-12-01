@@ -6,8 +6,8 @@ const dataTransfer = reactive<any>({});
 const visibleData = reactive<{ [key: number]: boolean }>({});
 
 export function useModal(): any {
-  const modal = ref<Nullable<any>>(null);
-  const loaded = ref<Nullable<boolean>>(false);
+  const modal = ref<any>(null);
+  const loaded = ref(false);
   const uid = ref<string>('');
 
   const register = (modalMethod: any) => {
